@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const WeatherApp = () => {
-  //const [dateTime, setDateTime] = useState('');
   const [forecastData, setForecastData] = useState([]);
   const [city, setCity] = useState('Polokwane');
   const [currentWeather, setCurrentWeather] = useState({
@@ -24,7 +23,7 @@ const WeatherApp = () => {
     return days[day];
   };
 
-  const displayForecast = (response) => {
+  const displayForecast = useCallback((response) => {
     const forecast = response.data.daily.slice(0, 6);
 
     setForecastData(
@@ -35,13 +34,21 @@ const WeatherApp = () => {
         minTemp: Math.round(forecastDay.temperature.minimum),
       }))
     );
-  };
+  }, []);
 
-  const search = (cityName) => {
+  const getForecast = useCallback((cityName) => {
+    const units = 'metric';
+    const apiKey = '0ffeeb933d0b51c0bd7ob493d69aftd6';
+    const apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityName}&key=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(displayForecast);
+  }, [displayForecast]);
+
+  const search = useCallback((cityName) => {
     const units = 'metric';
     const apiKey = '0ffeeb933d0b51c0bd7ob493d69aftd6';
     const url = `https://api.shecodes.io/weather/v1/current?query=${cityName}&key=${apiKey}&units=${units}`;
-    
+
     axios.get(url).then((response) => {
       const data = response.data;
 
@@ -56,34 +63,26 @@ const WeatherApp = () => {
       setCity(data.city);
       getForecast(data.city);
     });
-  };
-
-  const getForecast = (cityName) => {
-    const units = 'metric';
-    const apiKey = '0ffeeb933d0b51c0bd7ob493d69aftd6';
-    const apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityName}&key=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(displayForecast);
-  };
-
-  const initialLoad = () => {
-    const initialSearch = 'Polokwane';
-    setCity(initialSearch);
-    search(initialSearch);
-  };
+  }, [setCurrentWeather, setCity, getForecast]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     search(value);
-  };   
-  
+  };
+
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
   useEffect(() => {
+    const initialLoad = () => {
+      const initialSearch = 'Polokwane';
+      setCity(initialSearch);
+      search(initialSearch);
+    };
+
     initialLoad();
-  }, []);
+  }, [search]);
 
   return (
     <div>
