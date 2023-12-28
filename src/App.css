@@ -1,38 +1,84 @@
-.App {
+body {
+  display: block;
   text-align: center;
+  font-family: cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.borderexample {
+  border-width: 3px;
+  border-style: solid;
+  border-color: palevioletred;
+  padding: auto 65px;
+  margin: auto 450px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  padding-top: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  font-size: 60px;
+  font-weight: 1000;
+  background: -webkit-linear-gradient(violet, pink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  line-height: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#humid{
+  font-style: oblique;
+  font-weight: 1000;
+  color: palevioletred;
+}
+
+#windy{
+  font-style: oblique;
+  font-weight: 1000;
+  color: palevioletred;
+}
+
+#temp {
+  font-size: 50pt;
+  background: -webkit-linear-gradient(violet, pink);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ul {
+  list-style: none;
+  padding-bottom: 25px;
+}
+
+a {
+  color: hotpink;
+}
+
+button {
+  margin: 15px;
+  background-image: linear-gradient(pink, palevioletred);
+  border-radius: 15px;
+  border-style: none;
+}
+.weatherForecastTemps{
+  color: hotpink;
+  font-weight: 500;
+}
+.weatherForecastMinTemp {
+  opacity: 60%;
+}
+
+#temp-wrapper {
+padding-top: 25px;
+}
+#unit {
+  vertical-align: top;
+  color: hotpink;
 }
