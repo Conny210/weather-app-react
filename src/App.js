@@ -108,7 +108,7 @@ const WeatherApp = () => {
         src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${currentWeather.icon}.png`}
         alt={currentWeather.weatherDescription}
       />
-    </div>
+    {/*</div>
       <h2>Forecast</h2>
       <div className="forecast">
       {forecastData.map((forecastDay, index) => (
@@ -121,9 +121,9 @@ const WeatherApp = () => {
           <p>Max Temp: {forecastDay.maxTemp}°C</p>
           <p>Min Temp: {forecastDay.minTemp}°C</p>
         </div>
-      ))}
+      ))}*/}
       </div>
-    </div>
+      </div>
   );
 };
 
