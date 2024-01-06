@@ -22,7 +22,7 @@ export default function Date(props) {
   }
   return (
     <span>
-      {day} {hours}:{minutes}
+      {day}, <strong> {hours}:{minutes}</strong>
     </span>
   );
 }

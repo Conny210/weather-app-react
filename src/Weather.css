@@ -22,3 +22,10 @@ h1 {
     -webkit-text-stroke-color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  p {
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 1000;
+    color: pink;
+  }

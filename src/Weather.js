@@ -11,7 +11,7 @@ export default function Weather(props) {
           <h1>{props.data.city}</h1>
           <ul>
             <li>
-              <Date date={props.data.date} />, {props.data.description}
+              <Date date={props.data.date} /> 
             </li>
             <li>
               Humidity: <strong>{props.data.humidity}%</strong>, Wind:{" "}
@@ -27,6 +27,7 @@ export default function Weather(props) {
                 {Math.round(props.data.temperature)}
               </span>
               <span className="unit">°C</span>
+              <p>{props.data.description}</p>
             </div>
           </div>
         </div>
