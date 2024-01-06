@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import axios from "axios";
 import "./CurrentWeather.css";
 
@@ -67,7 +68,7 @@ export default function CurrentWeather(props) {
           </div>
         </div>
         <Weather data={weatherData} />
-        {/*<Forecast coordinates={weatherData.coordinates} city={weatherData.city}/>*/}
+        <Forecast coordinates={weatherData.coordinates} city={weatherData.city}/>
         <footer>
           This project was coded by{" "}
           <a
