@@ -1,84 +1,9 @@
 body {
   display: block;
-  text-align: center;
-  font-family: cursive;
 }
 
-.borderexample {
-  border-width: 3px;
-  border-style: solid;
-  border-color: palevioletred;
-  padding: auto 65px;
-  margin: auto 450px;
-}
 
-form {
-  padding-top: 25px;
-}
-
-h1 {
-  font-size: 60px;
-  font-weight: 1000;
-  background: -webkit-linear-gradient(violet, pink);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-}
-
-h3 {
-  line-height: 25px;
-}
-
-#humid{
-  font-style: oblique;
-  font-weight: 1000;
-  color: palevioletred;
-}
-
-#windy{
-  font-style: oblique;
-  font-weight: 1000;
-  color: palevioletred;
-}
-
-#temp {
-  font-size: 50pt;
-  background: -webkit-linear-gradient(violet, pink);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-ul {
-  list-style: none;
-  padding-bottom: 25px;
-}
-
-a {
-  color: hotpink;
-}
-
-button {
-  margin: 15px;
-  background-image: linear-gradient(pink, palevioletred);
-  border-radius: 15px;
-  border-style: none;
-}
-.weatherForecastTemps{
-  color: hotpink;
-  font-weight: 500;
-}
-.weatherForecastMinTemp {
-  opacity: 60%;
-}
-
-#temp-wrapper {
-padding-top: 25px;
-}
-#unit {
-  vertical-align: top;
-  color: hotpink;
+.App {
+  max-width: 800px;
+  margin: 60px auto;
 }

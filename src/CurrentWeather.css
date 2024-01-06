@@ -1,0 +1,112 @@
+.CurrentWeather {
+    font-family: "Cerebri-Sans", Helvetica, Arial, sans-serif;
+    background: white;
+    border: 5px solid;
+    border-color: #f65282;
+    border-radius: 16px;
+    box-shadow: 0px 30px 50px rgba(65, 50, 100, 0.08);
+    padding: 40px;
+    color: rgb(135, 135, 135);
+  }
+  
+  .CurrentWeather .logo {
+    max-width: 50px;
+    display: block;
+  }
+  
+  .CurrentWeather form {
+    border-bottom: 1px solid #f9f7fe;
+    padding-bottom: 30px;
+  }
+  
+  .CurrentWeather .search-input {
+    background: #f9f7fe;
+    border: 1px solid palevioletred;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 6px;
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    height: 50px;
+    line-height: 20px;
+  }
+  
+  .CurrentWeather .btn {
+    background: Pink;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 0;
+    border: none;
+    height: 50px;
+  }
+  
+  .CurrentWeather .search-input::placeholder {
+    line-height: 20px;
+    color: rgba(39, 33, 66, 0.4);
+  }
+  
+  .CurrentWeather h1 {
+    margin: 20px 0 10px 0;
+    line-height: 29px;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 48px;
+  
+    color: #272142;
+  }
+  
+  .CurrentWeather ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .CurrentWeather li {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    line-height: 20px;
+    list-style: none;
+  }
+  
+  .CurrentWeather li strong {
+    color: #f65282;
+    font-weight: normal;
+  }
+  
+  .CurrentWeather .temperature {
+    font-weight: bold;
+    color: rgb(33, 33, 33);
+    margin-left: 5px;
+    font-weight: 400;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 1;
+  }
+  
+  .CurrentWeather canvas {
+    margin: 10px 0;
+  }
+  
+  .CurrentWeather .unit {
+    color: rgb(33, 33, 33);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: normal;
+    position: relative;
+    line-height: 1;
+    top: -34px;
+  }
+  
+  .CurrentWeather footer {
+    font-size: 14px;
+    margin-top: 40px;
+    line-height: 18px;
+    text-align: center;
+    color: rgba(39, 33, 66, 0.4);
+  }
+  
+  .CurrentWeather footer a {
+    color: palevioletred;
+  }

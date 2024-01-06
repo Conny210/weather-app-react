@@ -1,0 +1,20 @@
+.Weather {
+    margin-top: 20px;
+  }
+  
+  .Weather .temp-container {
+    margin-top: 30px;
+    align-items: center;
+  }
+
+h1 {
+    font-size: 60px;
+    font-weight: 1000;
+    background: -webkit-linear-gradient(violet, pink);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
