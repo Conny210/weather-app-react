@@ -7,8 +7,12 @@
     align-items: center;
   }
 
-h1 {
+  .Weather .temperature {
     font-size: 60px;
+  }
+
+h1 {
+    font-size: 40px;
     font-weight: 1000;
     background: -webkit-linear-gradient(violet, pink);
     -webkit-background-clip: text;
